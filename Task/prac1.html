@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Example</title>
+</head>
+<body>
+
+  Name: <input class="name" type="text" id="nm" onblur="validate(nm, nmErr)">
+  <b id="nmErr"></b>
+  <br><br>
+
+  Mobile: <input class="mobile" type="text" id="mb" onblur="validate(mb, mbErr)">
+  <b id="mbErr"></b>
+  <br><br>
+
+  Email: <input class="email" type="text" id="eb" onblur="validate(eb, ebErr)">
+  <b id="ebErr"></b>
+  <br>
+
+  <script>
+    let nameExp = /^[a-zA-Z ]+$/;
+    let mobileExp = /^[0-9]+$/;
+    let emailExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    function validate(input, errorElement) {
+      let value = input.value.trim();
+
+      if (value === "") {
+        errorElement.innerHTML = input.className + " * Required...!";
+        errorElement.style.color = "red";
+        return;
+      }
+
+      if (input.className === "name") {
+        if (!nameExp.test(value)) {
+          errorElement.innerHTML = "* Letters only...!";
+          errorElement.style.color = "red";
+        } else {
+          errorElement.innerHTML = "";
+        }
+      }
+
+      if (input.className === "mobile") {
+        if (!mobileExp.test(value)) {
+          errorElement.innerHTML = "* Numbers only allowed...!";
+          errorElement.style.color = "red";
+        } else {
+          errorElement.innerHTML = "";
+        }
+      }
+
+      if (input.className === "email") {
+        if (!emailExp.test(value)) {
+          errorElement.innerHTML = "* Invalid email format...!";
+          errorElement.style.color = "red";
+        } else {
+          errorElement.innerHTML = "";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
