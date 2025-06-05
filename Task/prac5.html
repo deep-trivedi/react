@@ -1,0 +1,36 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Logical Operators</title>
+</head>
+<body>
+
+<script>
+
+    let num = 12;
+    let res1 = (num > 0) ? "+ve" : "-ve";
+    document.write("num is: " + res1 + "<br>"); // Output: +ve
+
+    let n1 = -12, n2 = 3;
+    let max1 = (n1 > n2) ? n1 : n2;
+    document.write("Max of n1 and n2: " + max1 + "<br>"); // Output: 3
+
+    let num1 = 121, num2 = 1123, num3 = 4000, num4 = 200;
+
+    // Find max of three numbers without using &&
+    let max = (num1 > num2)
+        ? ((num1 > num3) ? num1 : num3)
+        : ((num2 > num3) ? num2 : num3);
+    document.write("Max of num1, num2, num3: " + max + "<br>"); // Output: 4000
+
+    let m = (num1 > num2)
+        ? ((num1 > num3) ? num1 : num3)
+        : ((num2 > num3) ? num2 : num3);
+    document.write("Max (alternative way): " + m + "<br>"); // Output: 4000
+
+</script>
+
+</body>
+</html>
