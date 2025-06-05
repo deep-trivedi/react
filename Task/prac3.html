@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Logical Operators</title>
+</head>
+<body>
+
+<script>
+  
+
+    let cond1 = (1 == '1');
+    let cond2 = (1 < 1); // false
+    let cond3 = ('a' == "A"); // false
+    let cond4 = ('p' < 'q'); // true
+    let cond5 = (1 !== '1'); // true
+
+    if (cond1) {
+        if (!cond2) {
+            mayur = "t123";
+        } else {
+            mayur = "fsdf";
+        }
+    } else {
+        mayur = "fsdf";
+    }
+
+    document.write(mayur + "<br>");
+
+    let num1 = 12;
+    let num2 = -113;
+    let res = (num1 > num2) ? num1 : num2;
+    document.write(res + "<br>"); // 12
+
+    let chkNum = (num1 > 0) ? "+ve" : "-ve";
+    document.write(chkNum + "<br>"); // +ve
+
+    let n1 = 500, n2 = 30, n3 = 100;
+    let maxnUM;
+
+    if (n1 > n2) {
+        if (n1 > n3) {
+            maxnUM = n1;
+        } else {
+            maxnUM = n3;
+        }
+    } else {
+        if (n2 > n3) {
+            maxnUM = n2;
+        } else {
+            maxnUM = n3;
+        }
+    }
+
+    document.write(maxnUM); // 500
+</script>
+
+</body>
+</html>
