@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loops between 1 and 20</title>
+</head>
+<body>
+  <h2>For Loop: Print numbers from 1 to 20</h2>
+  <p id="forLoopOutput"></p>
+
+  <h2>While Loop: Sum of even numbers from 1 to 20</h2>
+  <p id="whileLoopOutput"></p>
+
+  <script>
+    // For loop: print numbers 1 to 20
+    let forOutput = "";
+    for (let i = 1; i <= 20; i++) {
+      forOutput += i + " ";
+    }
+    document.getElementById("forLoopOutput").textContent = forOutput.trim();
+
+    // While loop: sum of even numbers from 1 to 20
+    let sum = 0;
+    let num = 1;
+    while (num <= 20) {
+      if (num % 2 === 0) {
+        sum += num;
+      }
+      num++;
+    }
+    document.getElementById("whileLoopOutput").textContent = "Sum of even numbers from 1 to 20 is: " + sum;
+  </script>
+</body>
+</html>

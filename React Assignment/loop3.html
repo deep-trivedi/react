@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do-While Loop Input</title>
+</head>
+<body>
+  <h2>Enter a number greater than 10</h2>
+  <button onclick="askNumber()">Start</button>
+  <p id="message"></p>
+
+  <script>
+    function askNumber() {
+      let number;
+      do {
+        number = Number(prompt("Please enter a number greater than 10:"));
+      } while (isNaN(number) || number <= 10);
+
+      document.getElementById("message").textContent = `Thank you! You entered: ${number}`;
+    }
+  </script>
+</body>
+</html>
