@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greet & Sum Functions</title>
+</head>
+<body>
+  <h2>Task 1 & 2: Greet User</h2>
+  <input type="text" id="nameInput" placeholder="Enter your name" />
+  <button onclick="greetUser()">Greet</button>
+  <p id="greetOutput"></p>
+
+  <hr>
+
+  <h2>Task 3: Calculate Sum</h2>
+  <input type="number" id="num1" placeholder="Enter first number" />
+  <input type="number" id="num2" placeholder="Enter second number" />
+  <button onclick="displaySum()">Calculate Sum</button>
+  <p id="sumOutput"></p>
+
+  <script>
+    // Task 1 & 2: Greet User Function
+    function greetUser() {
+      const name = document.getElementById("nameInput").value;
+      const message = "Hello, " + name + "!";
+      document.getElementById("greetOutput").textContent = message;
+    }
+
+    // Task 3: Calculate Sum Function
+    function calculateSum(a, b) {
+      return a + b;
+    }
+
+    function displaySum() {
+      const num1 = Number(document.getElementById("num1").value);
+      const num2 = Number(document.getElementById("num2").value);
+      const result = calculateSum(num1, num2);
+      document.getElementById("sumOutput").textContent = "Sum is: " + result;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Car Object Example</title>
+</head>
+<body>
+  <h2>Car Object Manipulation</h2>
+  <button onclick="manipulateCar()">Show Car Info</button>
+  <p id="output"></p>
+
+  <script>
+    function manipulateCar() {
+      let car = {
+        brand: "Toyota",
+        model: "Camry",
+        year: 2020
+      };
+
+      let info = "Brand: " + car.brand + ", Model: " + car.model;
+
+      car.year = 2023;
+
+      car.color = "Red";
+
+      info += "<br>Updated Year: " + car.year;
+      info += "<br>Color: " + car.color;
+
+      document.getElementById("output").innerHTML = info;
+    }
+  </script>
+</body>
+</html>

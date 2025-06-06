@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fruit Array</title>
+</head>
+<body>
+  <h2>Check Console for Output</h2>
+  <button onclick="modifyFruits()">Modify Fruits</button>
+
+  <script>
+    function modifyFruits() {
+      let fruits = ["apple", "banana", "cherry"];
+
+      fruits.push("orange");
+
+      fruits.shift();
+
+      console.log("Modified fruits array:", fruits);
+    }
+  </script>
+</body>
+</html>
